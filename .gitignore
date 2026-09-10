@@ -29,3 +29,6 @@ sysinfo.txt
 .AppleDouble
 .LSOverride
 ._*
+
+# --- Crash reports ---
+mono_crash.*.json
