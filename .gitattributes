@@ -1,0 +1,4 @@
+*.unity   -text diff
+*.prefab  -text diff
+*.asset   -text diff
+*.meta    -text diff

@@ -1,0 +1,31 @@
+# --- Unity-generated folders ---
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# --- IDE / build artifacts ---
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.pidb
+*.booproj
+*.apk
+*.aab
+*.unitypackage
+crashlytics-build.properties
+sysinfo.txt
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
