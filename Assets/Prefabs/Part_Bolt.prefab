@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 8922865717570367805}
   - component: {fileID: 6303127151976489133}
   - component: {fileID: 808912231934664224}
+  - component: {fileID: 2138890436092105506}
   m_Layer: 0
   m_Name: Part_Bolt
   m_TagString: Part
@@ -263,3 +264,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &2138890436092105506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5691260889838470819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499a3dfee41754511a4d72e39834ba38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionReporter
+  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  minImpulse: 0.3
+  flashDuration: 0.4
