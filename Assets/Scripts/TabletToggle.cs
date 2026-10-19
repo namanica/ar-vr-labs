@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 // Показує/ховає планшет-меню перед гравцем (кнопка Menu на контролері або клавіша M).
@@ -18,10 +20,17 @@ public class TabletToggle : MonoBehaviour
     private void Update()
     {
         bool menuButton = OVRInput.GetDown(OVRInput.Button.Start);
-        bool keyboardM = Keyboard.current != null && Keyboard.current.mKey.wasPressedThisFrame;
+        bool keyboardM = !IsTyping() && Keyboard.current != null && Keyboard.current.mKey.wasPressedThisFrame;
 
         if (menuButton || keyboardM)
             Toggle();
+    }
+
+    // Чи стоїть зараз курсор у полі вводу (тоді M - це просто літера).
+    private bool IsTyping()
+    {
+        GameObject selected = EventSystem.current != null ? EventSystem.current.currentSelectedGameObject : null;
+        return selected != null && selected.GetComponent<TMP_InputField>() != null;
     }
 
     public void Toggle()
