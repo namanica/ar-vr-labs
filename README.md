@@ -10,7 +10,7 @@
 
 - **Unity 6.3 LTS** (`6000.3.x`), Universal Render Pipeline (URP)
 - **C#** — скрипти логіки та взаємодії
-- **Meta XR Core SDK + Meta XR Interaction SDK** — VR-риг, телепортація, захоплення предметів і Snap Zone
+- **Meta XR Core SDK + Meta XR Interaction SDK** — VR-риг, телепортація, захоплення предметів і Snap Zone, відстеження рук (синтетичні руки, розпізнавання жестів, Pinch/Palm Grab, Poke)
 - **OpenXR** — XR-провайдер (Meta XR feature, профіль контролерів Oculus Touch)
 - **Meta XR Simulator** — тестування без фізичного шолома
 - **TextMesh Pro** і World Space Canvas — просторовий інтерфейс (шрифт Righteous, ліцензія OFL)
@@ -24,7 +24,7 @@
 | 1 | Знайомство з Unity: 3D-сцена, префаби, скрипти та фізика колізій | `lab-1` | ✅ Виконано |
 | 2 | VR-сцена: пересування в просторі та маніпуляція об'єктами | `lab-2` | ✅ Виконано |
 | 3 | Просторові інтерфейси (Spatial UI) та покрокові форми | `lab-3` | ✅ Виконано |
-| 4 | Природні взаємодії руками (Hand Tracking) | `lab-4` | ⏳ Заплановано |
+| 4 | Природні взаємодії руками (Hand Tracking) | `lab-4` | ✅ Виконано |
 | 5 | Взаємодія з серверами: REST API та телеметрія | `lab-5` | ⏳ Заплановано |
 | 6 | На вибір: багатокористувацький режим (Photon) або змішана реальність (MR) | `lab-6` | ⏳ Заплановано |
 
@@ -53,8 +53,8 @@ Assets/
    git clone https://github.com/namanica/ar-vr-labs.git
    ```
 3. У Unity Hub: **Add → Add project from disk** → обрати папку репозиторію
-4. Відкрити сцену `Assets/Scenes/Workshop.unity` (ЛР1), `Assets/Scenes/Lab2_VR.unity` (ЛР2) або `Assets/Scenes/Lab3_SpatialUI.unity` (ЛР3)
-5. Для ЛР2 і ЛР3 запустити **Meta XR Simulator** (Meta → Meta XR Simulator → Activate)
+4. Відкрити сцену `Assets/Scenes/Workshop.unity` (ЛР1), `Assets/Scenes/Lab2_VR.unity` (ЛР2), `Assets/Scenes/Lab3_SpatialUI.unity` (ЛР3) або `Assets/Scenes/Lab4_HandTracking.unity` (ЛР4)
+5. Для ЛР2–ЛР4 запустити **Meta XR Simulator** (Meta → Meta XR Simulator → Activate)
 6. Натиснути **Play**
 
 Перше відкриття проєкту триває кілька хвилин — Unity генерує папку `Library/`.
@@ -88,3 +88,14 @@ Assets/
 | Інфо-картка предмета | навести промінь на грамофон, гітару або телевізор |
 | Налаштування | Settings: ім'я, лампи, музика, гучність; Save зберігає, Reset повертає стандартні |
 | Покроковий майстер | Instructions: 4 питання з перевіркою відповідей і результатом |
+
+## Керування (ЛР4, Meta XR Simulator, режим рук)
+
+| Дія | Як виконати |
+|---|---|
+| Увімкнути руки | панель Input у симуляторі → Hands |
+| Відкрити / закрити планшет | жест «вказівний палець» лівою рукою (поза Poke у симуляторі) |
+| Взяти чашку | щипок (поза Pinch) біля чашки |
+| Взяти чайник | обхват долонею (поза Grab) біля чайника |
+| Натиснути кнопку, тумблер, слайдер | поза Poke і рух пальцем уперед до елемента (кнопки Lights / Music на стіні, форма Settings на планшеті) |
+| Сервірувати піднос | відпустити чашку чи чайник над його місцем на підносі: предмет фіксується, кружечок стає зеленим |
