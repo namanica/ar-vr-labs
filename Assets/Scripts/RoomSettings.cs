@@ -31,4 +31,20 @@ public class RoomSettings : MonoBehaviour
         else if (!musicOn && music.isPlaying)
             music.Stop();
     }
+
+    // ЛР4: перемикання об'ємними кнопками на стіні (Poke)
+    public void ToggleLamps()
+    {
+        bool on = !lamps[0].enabled;
+        foreach (Light lamp in lamps)
+            lamp.enabled = on;
+    }
+
+    public void ToggleMusic()
+    {
+        if (music.isPlaying)
+            music.Stop();
+        else
+            music.Play();
+    }
 }
